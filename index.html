@@ -6,276 +6,261 @@
     <title>Signup Page</title>
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f8ff;
-    overflow: hidden;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    flex-direction: column;
-    padding: 20px;
-}
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-direction: column;
+            padding: 20px;
+        }
 
-.title {
-    font-size: 1.9em;
-    font-weight: 600;
-    color: #ff6f61;
-    margin-bottom: 13px;
-    animation: slideIn 1.5s ease-out;
-    text-align: center;
-}
+        .title {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            animation: slideIn 1.5s ease-out;
+            text-align: center;
+        }
 
-.form-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    width: 500px;
-    text-align: center;
-    animation: fadeIn 1.5s ease-out;
-    position: relative;
-    z-index: 1;
-}
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+            z-index: 1;
+        }
 
-input[type="text"], input[type="password"], input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #ff6f61;
-    border-radius: 8px;
-    font-size: 1.2em;
-    transition: 0.3s ease-in-out;
-}
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #ff6f61;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: 0.3s ease-in-out;
+        }
 
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
-    border-color: #ffca28;
-    box-shadow: 0 0 5px rgba(255, 202, 40, 0.7);
-}
+        input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+            border-color: #ffca28;
+            box-shadow: 0 0 10px rgba(255, 202, 40, 0.7);
+        }
 
-.submit-btn {
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    font-size: 1rem;
-    border-radius: 8px;
-    
-    cursor: pointer;
-    margin-top: 20px;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
+        .submit-btn {
+            background: linear-gradient(135deg, #ff6f61 0%, #ff3d2e 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-.submit-btn:hover {
-    background-color: #ff3d2e;
-    transform: scale(1.05);
-}
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #ff3d2e 0%, #ff6f61 100%);
+            transform: scale(1.05);
+        }
 
-.submit-btn:active {
-    background-color: #d94328;
-    transform: scale(1);
-}
+        .submit-btn:active {
+            background-color: #d94328;
+            transform: scale(1);
+        }
 
-.avatar-select {
-    margin-top: 16px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 20px;
-    gap: 15px;
-}
+        .avatar-select {
+            margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 20px;
+            gap: 15px;
+        }
 
-.avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #ffca28;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.8em;
-    transition: 0.3s;
-}
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ffca28;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.8em;
+            transition: 0.3s;
+        }
 
-.avatar:hover {
-    background-color: #ff6f61;
-    transform: scale(1.1);
-}
+        .avatar:hover {
+            background-color: #ff6f61;
+            transform: scale(1.2);
+        }
 
-.avatar.selected {
-    border: 5px solid #ff0000;
-}
+        .avatar.selected {
+            border: 5px solid #ff0000;
+        }
 
-/* Confetti Animation */
-@keyframes confettiFall {
-    0% {
-        top: -50px;
-        opacity: 1;
-    }
-    100% {
-        top: 100%;
-        opacity: 0;
-    }
-}
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
 
-/* Background Color Change Animation */
-@keyframes backgroundChange {
-    0% { background-color: #f0f8ff; }
-    50% { background-color: #ffedcc; }
-    100% { background-color: #f0f8ff; }
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-.loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-}
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
 
-.loading-spinner {
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #ff6f61;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
-}
-/* Footer Styling */
-footer {
-    background-color: #ff6f61;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.9em;
-}
+        .loading-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #ff6f61;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
 
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
-footer a:hover {
-    text-decoration: underline;
-}
+        footer {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
 
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+        footer a:hover {
+            text-decoration: underline;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .form-container {
-        width: 100%;
-        padding: 10px;
-    }
+        @media (max-width: 768px) {
+            .form-container {
+                width: 100%;
+                padding: 20px;
+            }
 
-    .title {
-        font-size: 1.4rem;
-    }
+            .title {
+                font-size: 1.6rem;
+            }
 
-    input[type="text"], input[type="password"], input[type="email"] {
-        font-size: 1rem;
-        padding: 8px;
-    }
+            input[type="text"], input[type="password"], input[type="email"] {
+                font-size: 1rem;
+                padding: 10px;
+            }
 
-    .avatar {
-        width: 40px;
-        height: 40px;
-        font-size: 2em;
-    }
+            .avatar {
+                width: 50px;
+                height: 50px;
+                font-size: 2em;
+            }
 
-    .submit-btn {
-        padding: 12px 20px;
-        font-size: 0.9rem;
-    }
-}
-footer {
-        font-size: 0.8em;
-    }
+            .submit-btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+        }
 
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 15px;
+                border-radius: 10px;
+            }
 
-@media (max-width: 480px) {
-    .form-container {
-        padding: 15px;
-        border-radius: 10px;
-    }
+            .title {
+                font-size: 1.5em;
+            }
 
-    .title {
-        font-size: 1.5em;
-    }
+            .avatar-select {
+                gap: 10px;
+            }
 
-    .avatar-select {
-        gap: 1px;
-    }
+            input[type="text"], input[type="password"], input[type="email"] {
+                font-size: 0.9rem;
+            }
 
-    input[type="text"], input[type="password"], input[type="email"] {
-        font-size: 0.9rem;
-    }
-
-    .submit-btn {
-        font-size: 0.8rem;
-        padding: 10px 15px;
-        gap: 1rem;
-    }
-}
-footer {
-        font-size: 0.7em;
-    }
-
-
-
+            .submit-btn {
+                font-size: 0.8rem;
+                padding: 10px 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="form-container">
-        <div class="title">Signup 🎉</div>
+            <div class="title">Signup 🎉</div>
             <form id="signup-form">
                 <input type="text" id="name" placeholder="Enter your name" required>
                 <input type="email" id="email" placeholder="Enter your email" required>
                 <input type="password" id="password" placeholder="Choose a password" required>
-            <div class="avatar-select">
-                <div class="avatar" id="avatar1">👦</div>
-                <div class="avatar" id="avatar2">👧</div>
-            </div>
-            <button type="submit" class="submit-btn">Sign Up</button>
-            <button type="submit" class="submit-btn">Log in</button>
-        </form>
+                <div class="avatar-select">
+                    <div class="avatar" id="avatar1">👦</div>
+                    <div class="avatar" id="avatar2">👧</div>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <button type="submit" class="submit-btn">Log in</button>
+            </form>
         </div>
     </div>
 
-    <!-- Loading Overlay -->
     <div class="loading-overlay" id="loading-overlay">
         <div class="loading-spinner"></div>
     </div>
 
-    <!-- Confetti Container -->
     <div id="confetti" class="confetti"></div>
 
     <script>
@@ -283,10 +268,9 @@ footer {
         const avatars = document.querySelectorAll('.avatar');
         const confettiContainer = document.getElementById('confetti');
         const loadingOverlay = document.getElementById('loading-overlay');
-        
+
         let selectedAvatar = null;
 
-        // Confetti Effect
         function createConfetti() {
             for (let i = 0; i < 100; i++) {
                 const confettiPiece = document.createElement('div');
@@ -302,28 +286,25 @@ footer {
             }
         }
 
-        // Avatar Selection
         avatars.forEach(avatar => {
             avatar.addEventListener('click', () => {
                 avatars.forEach(av => av.classList.remove('selected'));
                 avatar.classList.add('selected');
-                selectedAvatar = avatar.textContent; // Store selected avatar
+                selectedAvatar = avatar.textContent; 
             });
         });
 
-        // Form Submission with Loading Animation
         signupForm.addEventListener('submit', (e) => {
             e.preventDefault();
             loadingOverlay.style.display = 'flex';
-            
+
             setTimeout(() => {
                 loadingOverlay.style.display = 'none';
                 alert(`You have successfully signed up!\nAvatar: ${selectedAvatar}`);
-                createConfetti(); // Trigger confetti when signup is complete
+                createConfetti(); 
             }, 2000);
         });
 
-        // Background Animation (Color Change)
         setInterval(() => {
             document.body.style.animation = 'backgroundChange 5s infinite';
         }, 5000);
